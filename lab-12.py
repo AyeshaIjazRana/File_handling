@@ -1,8 +1,7 @@
-# TEST#2 (Monday 2/3/2026)
-# ; Question 1: Write a program to create a file and do the following. (CORRECT)
-# ; • Write 5 numbers into it
-# ; • Read the file
-# ; • Calculate and print the total sum
+# Question 1: Write a program to create a file and do the following.
+# Write 5 numbers into it
+# Read the file
+# Calculate and print the total sum
 
 with open("file1.txt","w") as file:
     for i in range(5):
@@ -19,13 +18,13 @@ with open("file1.txt", "a") as file:
     file.write(f"Total Sum: {total_sum}\n")
 
 
-# ; Question 2: Write a complete program that reads a CSV file containing student names and marks. (CORRECT)
-# ; • Displays each student’s grade
-# ; • Grades criteria:
-# ; ≥ 80 → A
-# ; ≥ 60 → B
-# ; ≥ 50 → C
-# ; < 50 → Fail
+# Question 2: Write a complete program that reads a CSV file containing student names and marks. 
+# Displays each student’s grade
+# Grades criteria:
+# ≥ 80 → A
+# ≥ 60 → B
+# ≥ 50 → C
+# < 50 → Fail
 
 import csv
 with open("grade.csv","w",newline="") as file:
@@ -49,9 +48,9 @@ with open("grade.csv","w",newline="") as file:
             print(Grade)    
         writer.writerow([student_name, marks,Grade])
 
-# ; Questions 3: Write a program that reads numbers from a text file.  (CORRECT)
-# ; • Finds highest and lowest number
-# ; • Prints both values
+# Questions 3: Write a program that reads numbers from a text file.  
+# Finds highest and lowest number
+# Prints both values
 
 with open("C:\\Users\\ayesh\\OneDrive\\Desktop\\Advance Python\\lab-12\\file1.txt","r") as file:
     numbers = [int(num) for num in file.read().split()]
@@ -63,9 +62,9 @@ with open("C:\\Users\\ayesh\\OneDrive\\Desktop\\Advance Python\\lab-12\\file1.tx
     else:
         print("No Number")
 
-# ; Question 4: Write a program to create a file (CORRECT)
-# ; • Write 5 numbers into it
-# ; • Count how many numbers are greater than 50
+# Question 4: Write a program to create a file 
+# Write 5 numbers into it
+# Count how many numbers are greater than 50
 
 import csv
 numbers = []
@@ -83,16 +82,16 @@ for n in numbers:
 print(f"Total numbers greater than 50: {count}")
 
 
-# ; Question 5: Write a program to: (CORRECT)
-# ; 1. Ask user to enter 15 numbers.
-# ; 2. Store them in a file.
-# ; 3. Read the file and calculate:
-# ; • Total sum
-# ; • Average
-# ; • Count of even numbers
-# ; • Count of odd numbers
-# ; • Largest number
-# ; Store the outputs of the Question 5 in a separate file name “output.txt”.
+# Question 5: Write a program to: 
+# 1. Ask user to enter 15 numbers.
+# 2. Store them in a file.
+# 3. Read the file and calculate:
+# • Total sum
+# • Average
+# • Count of even numbers
+# • Count of odd numbers
+# • Largest number
+# Store the outputs of the Question 5 in a separate file name “output.txt”.
 
 with open("numbers.txt", "w") as file:
     for i in range(15):
@@ -114,17 +113,17 @@ with open("output.txt", "w") as out_file:
     out_file.write(f"Count of Odd Numbers: {odd_count}\n")
     out_file.write(f"Largest Number: {largest}\n")
 
-# ; Question 6: Ask the user to enter data for 5 products:
-# ; For each product ask:
-# ; • Product Name
-# ; • Quantity Sold
-# ; • Price per Item
-# ; Store the data in CSV format like this:
-# ; Read the file again and for each product:
-# ; • Calculate total sale amount
-# ; (Total Sale = Quantity × Price)
-# ; • Display:
-# ; And you final CSV should show another column of total sales.
+# Question 6: Ask the user to enter data for 5 products:
+# For each product ask:
+# • Product Name
+# • Quantity Sold
+# • Price per Item
+# Store the data in CSV format like this:
+# Read the file again and for each product:
+# • Calculate total sale amount
+# (Total Sale = Quantity × Price)
+# • Display:
+# And you final CSV should show another column of total sales.
 
 import csv
 with open("product.csv", "w", newline="") as file:
@@ -138,5 +137,6 @@ with open("product.csv", "w", newline="") as file:
         total = qty * price
         writer.writerow([name, qty, price, total])
     print(f"Total Sale for {name} is: {total}")
+
 
 
